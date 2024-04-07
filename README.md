@@ -26,7 +26,7 @@ LG_HelloVision의 VOD 추천 서비스
 Main과 development 브랜치는 생성되어 있고 dev_개인식별ID 브랜치만 각자 생성
 
 
-## ☁️ How to start
+# ☁️ How to start
 
 1. Github Desktop 설치
 
@@ -61,7 +61,7 @@ Main과 development 브랜치는 생성되어 있고 dev_개인식별ID 브랜�
    ex) dev_young, dev_kim, dev_ppgrn
 
    
-## github desktop 사용법
+## 🐾 github desktop 사용법
 
 
 3. development를 dev_00에 merge
@@ -88,7 +88,7 @@ Main과 development 브랜치는 생성되어 있고 dev_개인식별ID 브랜�
 
    dev_000 브랜치가 아니라면 꼭!! dev_000으로 checkout (클릭하면 checkout, 그 브랜치로 이동하는 것)
          
-      <img width="508" alt="image" src="https://github.com/LG-hellovision-Final-Project/FrontEnd/assets/95211829/26c43a2f-e570-436e-9ca1-6559287df737">
+       <img width="600" alt="image" src="https://github.com/LG-hellovision-Final-Project/FrontEnd/assets/95211829/26c43a2f-e570-436e-9ca1-6559287df737">
 
         
 
@@ -129,3 +129,48 @@ Test: 테스트코드, 리팩토링 테스트 코드 추가
 Chore: 빌드업무 수정, 패키지 매니저 수정(.gitignore 수정)
 
 ex) Chore : readme 수정
+
+
+
+## 🍄 About Code Review - milestone & issue
+
+Github의 issue와 milestone을 사용
+
+issue : milestone = 1:n 
+
+< Issue > 
+
+: 프로젝트에 새로운 기능 제안 / 버그를 찾아 제보하는 
+
+< Milestone >
+
+: 이정표 역할 / issue를 그룹화하는데 사용 / Milestone에 연결된  issue가 종료되면 Milestone마다 진행 상황이 업데이트
+
+연관된 이슈의 추적과 진행 상황을 한눈에 파악하기 위함
+
+사용방법 예시)
+
+- Issue 작성 : 만들어둔 탬플릿에 맞춰 작성 / 꼭 추가 기능 하니여도 됨
+
+ <img width="600" alt="image" src="https://github.com/LG-hellovision-Final-Project/FrontEnd/assets/95211829/ae884ba1-b9ed-475b-8c59-643e6ecbbc50">
+
+우측 설명 )
+
+Assignees : 위탁인, 검토인으로 이슈를 관리할 사람, 봐줬으면 하는 사람을 지정한다.
+Lebels : 해당 이슈에 해당하는 Tags를 지정한다. 개발분야(server/client), 목적, 중요도 등
+Projects : 해당 이슈를 담을 Project를 지정한다.
+Milestone : “이정표”라는 뜻으로 해당 이슈를 담을 마일스톤을 선택한다. 한 이슈당 최대 하나의 마일스톤만 지정이 가능하다. (1:n 관계)
+
+- Milestone 작성 : issue를 이루는 작은 작업 단위
+
+<img width="600" alt="image" src="https://github.com/LG-hellovision-Final-Project/FrontEnd/assets/95211829/e90fbd22-2345-4bfe-a390-f8cf52e21f8f">
+
+issue에 여러개의 milestone이 있다
+
+milestone을 하나씩 끝낼때마다 milestone close를 하고 issue의 모든 milestone이 완료되면 issue가 완료되어 close된다.
+
+
+
+##  🐙 About FontEnd repo
+
+Prototype :
