@@ -31,7 +31,7 @@ Main과 development 브랜치는 생성되어 있고 dev_개인식별ID 브랜�
 1. Github Desktop 설치
 
 
-      링크 : https://desktop.github.com/download for windows -> sign into github.com
+      링크 : https://desktop.github.com/  -> sign into github.com
       
       <img width="600" alt="image" src="https://github.com/LG-hellovision-Final-Project/FrontEnd/assets/95211829/1a21826d-a7fa-4811-8e3b-fb00cc0b0693">
       
