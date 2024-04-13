@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View,Image  } from 'react-native';
-import icons from '../assets/images/clouds.png';
 
 export default function LoginPage() {
     return (

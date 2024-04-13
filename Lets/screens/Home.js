@@ -1,6 +1,6 @@
 import React,{useEffect } from 'react'; 
 import { StyleSheet, Text, View,Image  } from 'react-native';
-import icons from '../assets/images/clouds.png';
+import icons from '../assets/images/logo.png';
 
 export default function Home({navigation}) {
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function Home({navigation}) {
     return (
         <View style={styles.container}>
         {/* <Text style={{ color: 'white' }}>Open up App.js to start working on your app!</Text> */}
-        <Image source={icons} style={styles.image}/>
+            <Image source={icons} style={styles.image}/>
         </View>
     );
 }
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     image: {
-        width: 200,
-        height: 200,
+        width: 130,
+        height: 130,
     },
 
 });
