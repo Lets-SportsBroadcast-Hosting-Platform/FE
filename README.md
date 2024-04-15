@@ -174,4 +174,4 @@ milestone을 하나씩 끝낼때마다 milestone close를 하고 issue의 모든
 
 
 [![figma](https://github.com/Lets-SportsBroadcast-Hosting-Platform/FE/assets/95211829/f28552e4-616c-4593-9573-bb38c235705b)
-]([https://unity3d.com/kr](https://www.figma.com/file/C7bXka7dS1J7QOdUIq3UY6/Let's-%EB%A0%88%EC%B8%A0-team-library?type=design&node-id=0-1&mode=design&t=HRBYENyLf1LdU1IX-0))
+](https://www.figma.com/file/C7bXka7dS1J7QOdUIq3UY6/Let's-%EB%A0%88%EC%B8%A0-team-library?type=design&node-id=0-1&mode=design&t=HRBYENyLf1LdU1IX-0)
