@@ -172,4 +172,4 @@ milestone을 하나씩 끝낼때마다 milestone close를 하고 issue의 모든
 
 ##  🐙 About FontEnd repo
 
-https://www.figma.com/file/C7bXka7dS1J7QOdUIq3UY6/Let's-%EB%A0%88%EC%B8%A0-team-library?type=design&mode=design&t=xa4GPvLa2dGsPury-0
+[FIGMA](#https://www.figma.com/file/C7bXka7dS1J7QOdUIq3UY6/Let's-%EB%A0%88%EC%B8%A0-team-library?type=design&mode=design&t=xa4GPvLa2dGsPury-0-figma link)
