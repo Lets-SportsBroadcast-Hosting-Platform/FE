@@ -11,7 +11,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 WebBrowser.maybeCompleteAuthSession();
 
-export default function LoginPage() {
+export default function LoginPage({navigation}) {
     const [request, response, promptAsync] = Google.useAuthRequest({
         webClientId: "814369862994-q1q7dql3i8dgja96pmrjcqm7hl4bv3js.apps.googleusercontent.com",
         androidClientId: "814369862994-a3ne5dc9o270opj57vbcpevjddg702t5.apps.googleusercontent.com",
@@ -73,7 +73,7 @@ export default function LoginPage() {
             <Button icon={()=><Icon name="instagram" size={24} color={"white"}></Icon>} mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>
             <Text style={styles.text1}>인스타그램 로그인</Text>
             </Button>
-            <Button icon={()=><Icon name="apple" size={24} color={"white"}></Icon>} mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>
+            <Button icon={()=><Icon name="apple" size={24} color={"white"}></Icon>} mode="contained" onPress={() => navigation.navigate('ChooseUser')} style={styles.button}>
             <Text style={styles.text1}>Apple 로그인</Text>
             </Button>
         </View>
