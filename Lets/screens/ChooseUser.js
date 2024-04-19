@@ -3,7 +3,7 @@ import { Button } from 'react-native-paper';
 
 export default function LoginPage({navigation}) {
   const handleHostPress = () => {
-    navigation.navigate('LoginPage')
+    navigation.navigate('HostAuthentication')
   };
     return (
         <View style={styles.container}>

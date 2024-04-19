@@ -20,7 +20,6 @@
       "package": "com.lgdx.lets"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
