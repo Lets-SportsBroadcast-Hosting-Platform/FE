@@ -59,6 +59,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     paddingTop: 20,
     paddingBottom: 10,
+    width: '100%',
+    position: 'relative',
   },
   headerText: {
     fontWeight: 'bold',
@@ -66,7 +68,9 @@ const styles = StyleSheet.create({
   },
   touchable: {
     alignItems: 'center',
-
+    position: 'absolute',
+    top: '50%', left: 0,
+    transform: [{translateY: 13.1}, {translateX: 20}]
   },
   arrowIcon: {
     width: 20,
