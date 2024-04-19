@@ -2,8 +2,13 @@ import { StyleSheet, Text, View,Image  } from 'react-native';
 import icons from '../assets/images/logo.png';
 import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function LoginPage() {
+    const navigation = useNavigation();
+    const applebuttonPress = () => {
+        navigation.navigate('ChooseUser')
+    };
     return (
         <View style={styles.container}>
         <Text style={styles.text}>Let's</Text>
@@ -16,7 +21,7 @@ export default function LoginPage() {
             <Button icon={()=><Icon name="instagram" size={24} color={"white"}></Icon>} mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>
             <Text style={styles.text1}>인스타그램 로그인</Text>
             </Button>
-            <Button icon={()=><Icon name="apple" size={24} color={"white"}></Icon>} mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>
+            <Button icon={()=><Icon name="apple" size={24} color={"white"}></Icon>} mode="contained" onPress={applebuttonPress} style={styles.button}>
             <Text style={styles.text1}>Apple 로그인</Text>
             </Button>
         </View>
