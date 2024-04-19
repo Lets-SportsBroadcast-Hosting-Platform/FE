@@ -1,78 +1,90 @@
 import React from 'react';
-import { StyleSheet, Text, View,Image,TouchableOpacity   } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import arrowToLeft from '../assets/images/arrowToLeft.png';
 import { useNavigation } from '@react-navigation/native';
-import { TextInput } from 'react-native-paper';
+import { TextInput, Button } from 'react-native-paper';
 
 export default function LoginPage() {
   const navigation = useNavigation();
 
-  const buttonPress = () => {
-    navigation.navigate('ChooseUser')
+  const arrowbuttonPress = () => {
+    navigation.navigate('ChooseUser');
+    console.log("arrowbuttonPressed");
   };
 
   //TextInput
   const [text, setText] = React.useState('');
   const onChangeText = (inputText) => {
-    setText(inputText)
-    console.log(inputText)
+    setText(inputText);
+    console.log(inputText);
   };
 
-    return (
-        <View style={styles.container}>
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={arrowbuttonPress} style={styles.touchable}>
+          <Image source={arrowToLeft} style={styles.arrowIcon} />
+        </TouchableOpacity>
+        <Text style={styles.headerText}>사장님이신가요?</Text>
+        
+      </View>
 
-          <View style={styles.header}>
-
-            <TouchableOpacity onPress={buttonPress}>
-              <Image source={arrowToLeft} style={styles.arrowIcon} />
-            </TouchableOpacity>
-            <Text style={styles.headerText}>사장님이신가요?</Text>
-
-          </View>
-
-          <View style={styles.textInputContainer}>
-          <TextInput
-            label="가게 이름을 입력해주세요"
-            value={text}
-            onChangeText={onChangeText}
-            style={styles.storeInputText}
-          />
-          </View>
-
-
-        </View>
-    );
+      <View style={styles.textInputContainer}>
+        <TextInput
+          label="가게 이름을 입력해주세요"
+          value={text}
+          onChangeText={onChangeText}
+          style={styles.storeInputText}
+        />
+      </View>
+      <Button mode="contained" onPress={() => console.log('Pressed')} style={styles.typeButton}>
+        직접등록
+      </Button>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        height:'100%',
-        flex: 1,
-        // justifyContent: 'center',
-        alignItems: 'center',
-    },
-    header: {
-      flexDirection: 'row',
-      marginTop:15,
-      marginBottom:10,
-      alignItems: 'center',
-      justifyContent: 'center',
-      paddingTop: 20,
-      paddingBottom: 10,
-    },
-    headerText: {
-      fontWeight: 'bold',
-      fontSize: 20,
-      marginLeft: 10,
-    },
-    arrowIcon: {
-      width: 20,
-      height: 20,
-      marginTop:4.5,
+  container: {
+    height: '100%',
+    flex: 1,
+    alignItems: 'center',
+    position: 'relative'
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 30,
+    marginBottom: 10,
+    paddingTop: 20,
+    paddingBottom: 10,
+  },
+  headerText: {
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  touchable: {
+    alignItems: 'center',
 
-    },
-    textInputContainer :{
-      width:360,
-      justifyContent: 'center',
-    }
+  },
+  arrowIcon: {
+    width: 20,
+    height: 20,
+     // 이미지와 텍스트 사이의 간격 조정
+  },
+  textInputContainer: {
+    width: 360,
+    justifyContent: 'center',
+  },
+  typeButton: {
+    width: 360,
+    borderRadius: 5,
+    marginTop: 7,
+    backgroundColor:'#01162D',
+  },
+  storeInputText :{
+    height:45,
+    borderRadius:5
+  }
 });
