@@ -3,8 +3,8 @@
     "name": "Lets",
     "slug": "Lets",
     "version": "1.0.0",
+    "scheme" : "com.lgdx.lets",
     "orientation": "portrait",
-    "scheme": "com.lgdx.lets",
     "userInterfaceStyle": "light",
     "splash": {
       "resizeMode": "contain",
@@ -17,18 +17,9 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#ffffff"
-      },
       "package": "com.lgdx.lets"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "5f7af9bd-a72a-40eb-b849-032af07225ee"
-      }
     }
   }
 }
