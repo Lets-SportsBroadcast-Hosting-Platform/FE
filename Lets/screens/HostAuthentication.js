@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native';
 import arrowToLeft from '../assets/images/arrowToLeft.png';
 import { useNavigation } from '@react-navigation/native';
 import { TextInput, Button } from 'react-native-paper';
@@ -32,14 +32,20 @@ export default function HostAuthentication() {
     setText(inputText);
   };
 
-  const goNextStep=()=>{
-    // navigation.navigate('다음 스텝 컴포넌트명')
-    console.log('next step Go!')
+  const goNextStep=(title)=>{
+    if(title === ''){
+      Alert.alert('먼저 가게 이름을 입력해주세요!')
+      return;
+    }
+    console.log(`${title} 사업장 선택!`)
+    navigation.navigate('HostBusinessRegisNumber', {
+      'title': title,
+    })
   }
 
   const StoreList = storeInfoList.map((store, storeIdx)=>{
     return (
-    <TouchableOpacity style={styles.storeItem} onPress={goNextStep} key={storeIdx}>
+    <TouchableOpacity style={styles.storeItem} onPress={()=>goNextStep(store.title)} key={storeIdx}>
       <Text style={[styles.storeItemText, styles.storeItemTitle]}>{store.title}</Text>
       <Text style={[styles.storeItemText, styles.storeItemDesc]}>{store.desc}</Text>
     </TouchableOpacity>
@@ -58,13 +64,14 @@ export default function HostAuthentication() {
       <View style={styles.contentContainer}>
         <View style={styles.textInputContainer}>
           <TextInput
-            label="가게 이름을 입력해주세요"
+            placeholder='가게 이름을 입력해주세요'
             value={text}
             onChangeText={onChangeText}
             style={styles.storeInputText}
+            mode='outlined'
           />
         </View>
-        <Button mode="contained" onPress={() => console.log('Pressed')} style={styles.typeButton}>
+        <Button mode="contained" onPress={() => goNextStep(text)} style={styles.typeButton}>
           직접등록
         </Button>
         {StoreList}
