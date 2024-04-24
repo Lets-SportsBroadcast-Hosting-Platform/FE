@@ -1,24 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-
+import SocialKakao from './components/KakaoLoginBtn';
 function App() {
+  // 토큰이 있다면 토큰이 리턴되어 True, 없다면 null이 리턴되어 False 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <SocialKakao />
+    </div >
   );
 }
 
